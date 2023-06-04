@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#inventory table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#inventory th,
+#inventory td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#add-product-form,
+#remove-product-form,
+#update-quantity-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#add-product-form label,
+#remove-product-form label,
+#update-quantity-form label {
+    margin-top: 10px;
+}
+
+#add-product-form input,
+#remove-product-form input,
+#update-quantity-form input {
+    margin-top: 5px;
+}
+
+#add-product-form button,
+#remove-product-form button,
+#update-quantity-form button {
+    margin-top: 10px;
+}
+</style>
+    
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+    <div id="inventory">
+        <h2>Inventory</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </div>
+    <div id="add-product">
+        <h2>Add Product</h2>
+        <form id="add-product-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="price">Price:</label>
+            <input type="number" id="price" required>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+    <div id="remove-product">
+        <h2>Remove Product</h2>
+        <form id="remove-product-form">
+            <label for="remove-id">Product ID:</label>
+            <input type="number" id="remove-id" required>
+            <button type="submit">Remove Product</button>
+        </form>
+    </div>
+    <div id="update-quantity">
+        <h2>Update Quantity</h2>
+        <form id="update-quantity-form">
+            <label for="update-id">Product ID:</label>
+            <input type="number" id="update-id" required>
+            <label for="new-quantity">New Quantity:</label>
+            <input type="number" id="new-quantity" required>
+            <button type="submit">Update Quantity</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
